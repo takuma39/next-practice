@@ -9,7 +9,7 @@ export default async function SSGPage() {
   const timestamp = new Date().toISOString()
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative h-screen w-full">
       SSG ビルド時に生成され固定: {timestamp}
       <Image
         src={image}
@@ -17,7 +17,7 @@ export default async function SSGPage() {
         width={500} // 任意の幅
         height={300} // 任意の高さ
         sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover w-full h-full"
+        className="h-full w-full object-cover"
       />
     </div>
   )

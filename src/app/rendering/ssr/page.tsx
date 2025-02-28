@@ -12,7 +12,7 @@ export default async function SSRPage() {
   const timestamp = new Date().toISOString()
 
   return (
-    <div className="relative w-full h-screen">
+    <div className="relative h-screen w-full">
       <p>SSR 毎回リロード: {new Date(timestamp).toLocaleTimeString()}</p>
       <Image
         src={image}
@@ -20,7 +20,7 @@ export default async function SSRPage() {
         width={500} // 任意の幅
         height={300} // 任意の高さ
         sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-cover w-full h-full"
+        className="h-full w-full object-cover"
       />
     </div>
   )
